@@ -1341,7 +1341,7 @@ case $os in
 	     | hpux* | unos* | osf* | luna* | dgux* | auroraux* | solaris* \
 	     | sym* | kopensolaris* | plan9* \
 	     | amigaos* | amigados* | msdos* | newsos* | unicos* | aof* \
-	     | aos* | aros* | cloudabi* | sortix* | dennix* \
+	     | aos* | aros* | cloudabi* | sortix* | cobalt* \
 	     | nindy* | vxsim* | vxworks* | ebmon* | hms* | mvs* \
 	     | clix* | riscos* | uniplus* | iris* | isc* | rtu* | xenix* \
 	     | knetbsd* | mirbsd* | netbsd* \

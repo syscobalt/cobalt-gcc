@@ -133,7 +133,7 @@ env_manager::xput (const char *string)
       m_keys.safe_push (kv);
     }
 
-#ifdef __dennix__
+#ifdef __cobalt__
   const char* equals = strchr(string, '=');
   char* name = xstrndup(string, equals - string);
   setenv(name, equals + 1, 1);

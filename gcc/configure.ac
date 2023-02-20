@@ -121,7 +121,7 @@ esac])
 # Default local prefix if it is empty
 if test x$local_prefix = x; then
   case "${target}" in
-    *-*-dennix*)
+    *-*-cobalt*)
       local_prefix=/local ;;
     *)
       local_prefix=/usr/local ;;
@@ -218,9 +218,9 @@ gcc_gxx_include_dir_add_sysroot=0
 if test x${gcc_gxx_include_dir} = x; then
   if test x${enable_version_specific_runtime_libs} = xyes; then
     gcc_gxx_include_dir='${libsubdir}/include/c++'
-  elif test -z "${target%%*-dennix*}"; then
+  elif test -z "${target%%*-cobalt*}"; then
     # libstdc++ is usually built as part of gcc. However libstdc++ depends on
-    # libc which needs gcc to be built. Therefore on Dennix we don't build
+    # libc which needs gcc to be built. Therefore on Cobalt we don't build
     # libstdc++ as part of gcc but instead install libstdc++ into the sysroot.
     # For this we need to tell gcc to look into the sysroot for libstdc++
     # headers. Note that this means that libstdc++ headers installed as part of
@@ -1162,8 +1162,8 @@ AC_CHECK_HEADER(pthread.h, [have_pthread_h=yes], [have_pthread_h=])
 gcc_AC_C_CHAR_BIT
 
 case "${target}" in
-  *-*-dennix*)
-    # autoconf does not properly detect endianness on Dennix. Assume little endian.
+  *-*-cobalt*)
+    # autoconf does not properly detect endianness on Cobalt. Assume little endian.
     export ac_cv_c_bigendian=no
     ;;
 esac
@@ -5952,7 +5952,7 @@ AC_CACHE_CHECK(__stack_chk_fail in target C library,
     gcc_cv_libc_provides_ssp=no
   else
     case "$target" in
-       *-*-dennix*)
+       *-*-cobalt*)
          gcc_cv_libc_provides_ssp=yes;;
        *-*-musl*)
 	 # All versions of musl provide stack protector

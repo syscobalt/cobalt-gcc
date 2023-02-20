@@ -1,5 +1,5 @@
-#undef TARGET_DENNIX
-#define TARGET_DENNIX 1
+#undef TARGET_COBALT
+#define TARGET_COBALT 1
 
 #undef LIB_SPEC
 #define LIB_SPEC "-lc"
@@ -16,9 +16,9 @@
 #undef TARGET_OS_CPP_BUILTINS
 #define TARGET_OS_CPP_BUILTINS() \
   do { \
-    builtin_define ("__dennix__"); \
+    builtin_define ("__cobalt__"); \
     builtin_define ("__unix__"); \
-    builtin_assert ("system=dennix"); \
+    builtin_assert ("system=cobalt"); \
     builtin_assert ("system=unix"); \
     builtin_assert ("system=posix"); \
   } while(0);

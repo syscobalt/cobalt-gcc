@@ -21037,7 +21037,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
         ac_has_nanosleep=yes
         ac_has_sched_yield=yes
         ;;
-      dennix*)
+      cobalt*)
         ac_has_clock_monotonic=yes
         ac_has_clock_realtime=yes
         ac_has_nanosleep=yes
@@ -53639,7 +53639,7 @@ done
 
     ;;
 
-  *-dennix*)
+  *-cobalt*)
 
   # If we're not using GNU ld, then there's no point in even trying these
   # tests.  Check for that first.  We should have already tested for gld

@@ -25,7 +25,7 @@ see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
  * ISO C Standard:  5.2.4.2.2  Characteristics of floating types <float.h>
  */
 
-#if defined(__dennix__) && __has_include_next(<float.h>)
+#if defined(__cobalt__) && __has_include_next(<float.h>)
 /* The GCC <float.h> defines FLT_ROUNDS incorrectly. Just use the <float.h>
    from libm which does not have this problem. */
 #  include_next <float.h>
